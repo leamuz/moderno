@@ -200,7 +200,7 @@
     }
   }
   &-price{
-    color: &bg;
+    color: $bg;
     font-size: 20px;
     @include f700;
   }
@@ -364,8 +364,8 @@
   }
 }
 // end advantages
-// start aythor
 
+// start aythor
 .author{
   background-position: center;
   background-repeat: no-repeat;
@@ -406,8 +406,8 @@
   }
 }
 // end author
-// start tutorial
 
+// start tutorial
 .tutorial{
   padding: 70px 0 120px;
   &__title{
@@ -438,9 +438,176 @@
     padding: 30px 10px;
   }
 }
-
-
 // end tutorial
+
+// start footer
+.footer{
+  background-color: $bg;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 0 80px;
+  }
+}
+.footer__col{
+  max-width: 270px;
+  width: 100%;
+  &-menu{
+    max-width: 220px;
+  }
+  &-title{
+    font-family: 'Raleway', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    position: relative;
+    &::after{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 2px;
+      width: 51px;
+      height: 3px;
+      background-color: $green;
+    }
+  }
+  &-text{
+    color: #b7c3c8;
+    margin-bottom: 30px;
+  }
+}
+.footer__info{
+  margin-top: 18px;
+  color: #fff;
+  @include f500;
+  padding-left: 30px;
+  position: relative;
+  &::before{
+    content: '\f041';
+    font-family: 'icomoon';
+    color: $green;
+    font-size: 18px;
+    position: absolute;
+    left: 0;
+  }
+}
+.footer__info-phone{
+  &::before{
+    content: '\f095';
+  }
+  &:hover{
+    text-decoration: underline;
+  }
+}
+.footer__col-list{
+  a{
+    margin-bottom: 13px;
+    color: #b7c3c8;
+    padding-left: 22px;
+    position: relative;
+    transition: all .3s;
+    &::before{
+      content: '\f105';
+      font-family: 'icomoon';
+      color: $green;
+      font-size: 18px;
+      position: absolute;
+      left: 0;
+    }
+    &:hover{
+      color: rgba(183, 195, 200, 0.6);
+    }
+  }
+}
+.footer__social-link{
+  margin-bottom: 33px;
+  li{
+    display: inline-block;
+    & + li{
+      margin-left: 7px;
+    }
+  }
+  a{
+    width: 28px;
+    height: 28px;
+    background-image: url(../images/css_sprites.png);
+    transition: ease .5s;
+    &:hover{
+      transform: scale(1.2);
+    }
+  }
+}
+.link-twitter {
+  background-position: -0 -28px;
+}
+.link-youtube {
+  background-position: -28px -0;
+}
+.link-pinterest {
+  background-position: -28px -28px;
+}
+.link-linkedin{
+  background-position: -56px -0;
+}
+.footer__form-title{
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #fff;
+}
+.footer__form{
+  position: relative;
+  input{
+    border: none;
+    background-color: #2f3c43;
+    display: block;
+    width: 100%;
+    height: 40px;
+    color: #fff;
+    font-size: 14px;
+    padding-left: 13px;
+    padding-right: 50px;
+    box-shadow: -2px -2px 3px 0px rgba(0, 0, 0, 0.6);
+    &::placeholder{
+      color: #697378;
+    }
+  }
+  button{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: $green;
+    border: none;
+    width: 43px;
+    height: 40px;
+    cursor: pointer;
+    transition: all .3s;
+    &:hover{
+      background-color: darken($green, 10%);
+    }
+    &::before{
+      content: '\f124';
+      position: absolute;
+      font-family: 'icomoon';
+      font-size: 20px;
+      color: #fff;
+      top: 11px;
+      left: 13px;
+    }
+  }
+}
+.footer__copy{
+  border-top: 1px solid #424d53;
+  padding: 25px 0;
+}
+.footer__copy-text{
+  text-align: center;
+  font-size: 15px;
+  color: #919699;
+}
+
+// end footer
 
 
 
