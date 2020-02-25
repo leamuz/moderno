@@ -325,10 +325,119 @@
 .menu__btn{
   display: none;
 }
-
 // end header
-// start search
 
+// start modal
+#modal{
+  background-color: $green;
+  max-width: 730px;
+  width: 100%;
+  padding-top: 90px;
+  padding-bottom: 100px;
+}
+.login__title{
+  text-align: center;
+  font-size: 48px;
+  @include f700;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+.login__wrapper{
+  form{
+    max-width: 400px;
+    margin: 0 auto;
+    a:hover{
+      text-decoration: underline;
+    }
+  }
+  label{
+    position: relative;
+    display: block;
+    width: 100%;
+    &::before{
+      position: absolute;
+      font-family: 'icomoon';
+      font-size: 14px;
+      color: #fff;
+      left: 18px;
+      top: 9px;
+    }
+  }
+  .login__label-name::before{
+    content: "\f007";
+  }
+  .login__label-pass::before{
+    content: "\f023";
+  }
+  input{
+    height: 43px;
+    margin-bottom: 8px;
+    border: none;
+    background-color: #76ae36;
+    color: #fff;
+    font-size: 14px;
+    padding-left: 40px;
+    display: block;
+    width: 100%;
+    outline: none;
+    &::placeholder{
+      color: #fff;
+      font-size: 14px;
+    }
+  }
+}
+.login-btn{
+  margin-top: 19px;
+  margin-right: 10px;
+  padding: 18px 0 16px;
+  background-color: #fff;
+  width: 140px ;
+  text-transform: uppercase;
+  border: none;
+  @include f700;
+  box-shadow: 0 2px 2px rgba(118, 174, 54, 0.75);
+  cursor: pointer;
+  transition: linear .3s;
+  &:hover{
+    box-shadow: 0 3px 2px #557d27;
+  }
+}
+.lost-pass{
+  display: block;
+  margin-top: 20px;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+.creat-acc{
+  margin-top: 19px;
+  padding: 15px 0 15px 28px ;
+  text-align: center;
+  width: 245px;
+  background-color: #76ae36;
+  color: #fff;
+  font-size: 18px;
+  position: relative;
+  &::before{
+    position: absolute;
+    content: "\f044";
+    top: 15px;
+    left: 35px;
+    font-family: 'icomoon';
+    font-size: 18px;
+    color: #fff;
+  }
+}
+.fancybox-button svg path{
+  color: #fff;
+}
+
+
+
+// end modal
+
+// start search
 .search{
   background-repeat: no-repeat;
   background-size: cover;
@@ -1578,11 +1687,102 @@ button.icon-unsorted{
     @include f500;
   }
 }
-
-
-
 // end product-one
 
+//  start page-404
+.page-404__wrapper,
+.about__wrapper{
+  border: 1px solid #d7d7d7;
+  background-color: #fff;
+  margin-bottom: 150px;
+}
+.page-404__head,
+.about__head{
+  font-size: 24px;
+  @include f500;
+  color: #444;
+  padding: 23px 27px;
+  border-bottom: 1px solid #d7d7d7;
+}
+.page-404__inner{
+  background-color: $green;
+  color: #fff;
+}
+.page-404__404{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 300px;
+  font-weight: 800;
+  line-height: 300px;
+  padding-top: 70px;
+  padding-bottom: 20px;
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  &::after{
+    content: '';
+    position: absolute;
+    background-image: url(../images/page-404.png);
+    width: 150px;
+    height: 292px;
+    margin-left: 20px;
+  }
+}
+.page-404__info{
+  max-width: 530px;
+  margin: 0 auto;
+  text-align: center;
+}
+.page-404__title{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: 6px;
+  margin-bottom: 30px; 
+}
+.page-404__text{
+  font-size: 18px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  margin-bottom: 60px;
+}
+.page-404__link{
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  padding: 15px 30px 16px;
+  margin-bottom: 100px;
+  transition: linear .3s;
+  &:hover{
+    color: $green;
+    background-color: #fff;
+  }
+}
+//  end page-404
+
+// start about
+.about__inner{
+  padding: 0px 65px 10px 50px;
+}
+.about__box{
+  h3{
+    font-size: 20px;
+    @include f700;
+    color: #444;
+    margin-top: 40px;
+    margin-bottom: 15px;
+  }
+  p{
+    margin-bottom: 40px;
+  }
+}
+
+
+// end about
 
 
 @import 'media';
